@@ -11,13 +11,11 @@ namespace MovingObject
 {
     public partial class ServerForm : Form
     {
-        // Pen, Rectangle, dan variabel untuk pergerakan
         Pen red = new Pen(Color.Red);
         Rectangle rect = new Rectangle(20, 20, 30, 30);
         SolidBrush fillBlue = new SolidBrush(Color.Blue);
         int slide = 10;
 
-        // Socket server untuk komunikasi
         private Socket serverSocket;
         private List<Socket> clientSockets = new List<Socket>();
         private byte[] buffer = new byte[1024];
@@ -28,11 +26,9 @@ namespace MovingObject
             timer1.Interval = 50;
             timer1.Enabled = true;
 
-            // Memulai server socket
             StartServer();
         }
 
-        // Memulai server untuk mendengarkan koneksi klien
         private void StartServer()
         {
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -41,7 +37,6 @@ namespace MovingObject
             serverSocket.BeginAccept(AcceptCallback, null);
         }
 
-        // Menerima koneksi dari klien
         private void AcceptCallback(IAsyncResult ar)
         {
             Socket clientSocket = serverSocket.EndAccept(ar);
@@ -49,10 +44,9 @@ namespace MovingObject
             serverSocket.BeginAccept(AcceptCallback, null);
         }
 
-        // Mengirimkan data posisi ke klien
         private void SendDataToClients()
         {
-            string positionData = $"{rect.X},{rect.Y}";  // Kirim posisi X dan Y
+            string positionData = $"{rect.X},{rect.Y}";
             byte[] data = Encoding.ASCII.GetBytes(positionData);
 
             foreach (var client in clientSockets)
@@ -63,7 +57,6 @@ namespace MovingObject
                 }
                 catch (SocketException)
                 {
-                    // Jika terjadi kesalahan, tutup socket dan keluarkan dari list
                     client.Close();
                     clientSockets.Remove(client);
                     break;
@@ -73,14 +66,11 @@ namespace MovingObject
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            // Menggerakkan kubus
             rect.X += slide;
             back();
 
-            // Kirim data posisi ke semua klien
             SendDataToClients();
 
-            // Menggambar ulang di server
             Invalidate();
         }
 
@@ -92,7 +82,6 @@ namespace MovingObject
                 slide = 10;
         }
 
-        // Menggambar objek di form
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;

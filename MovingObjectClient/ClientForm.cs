@@ -54,7 +54,6 @@ namespace MovingObjectClient
                 int received = clientSocket.EndReceive(AR);
                 if (received > 0)
                 {
-                    // Asumsi data yang diterima dalam format "X,Y"
                     string data = Encoding.ASCII.GetString(buffer, 0, received);
                     string[] positionData = data.Split(',');
 
@@ -62,17 +61,14 @@ namespace MovingObjectClient
                     {
                         int newX, newY;
 
-                        // Parse X dan Y dari data yang diterima
                         if (int.TryParse(positionData[0], out newX) && int.TryParse(positionData[1], out newY))
                         {
-                            // Update posisi kubus di client
                             rect.X = newX;
                             rect.Y = newY;
-                            Invalidate(); // Memicu repaint agar kubus diupdate
+                            Invalidate();
                         }
                     }
 
-                    // Lanjut menerima data dari server
                     clientSocket.BeginReceive(buffer, 0, buffer.Length, SocketFlags.None, ReceiveCallback, null);
                 }
             }

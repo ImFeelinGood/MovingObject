@@ -13,7 +13,6 @@ namespace MovingObjectClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Menjalankan form utama, yaitu ClientForm
             Application.Run(new ClientForm());
         }
     }
