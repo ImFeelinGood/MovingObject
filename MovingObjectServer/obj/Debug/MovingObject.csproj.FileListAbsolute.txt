@@ -1,0 +1,10 @@
+F:\Kuliah\Semester 5\Praktikum Pemrograman Jaringan Komputer\Ngaco\NetworkProgramming-master\MovingObject\obj\Debug\MovingObject.csproj.AssemblyReference.cache
+F:\Kuliah\Semester 5\Praktikum Pemrograman Jaringan Komputer\Ngaco\NetworkProgramming-master\MovingObject\obj\Debug\MovingObject.Properties.Resources.resources
+F:\Kuliah\Semester 5\Praktikum Pemrograman Jaringan Komputer\Ngaco\NetworkProgramming-master\MovingObject\obj\Debug\MovingObject.csproj.GenerateResource.cache
+F:\Kuliah\Semester 5\Praktikum Pemrograman Jaringan Komputer\Ngaco\NetworkProgramming-master\MovingObject\obj\Debug\MovingObject.csproj.CoreCompileInputs.cache
+F:\Kuliah\Semester 5\Praktikum Pemrograman Jaringan Komputer\Ngaco\NetworkProgramming-master\MovingObject\bin\Debug\MovingObject.exe.config
+F:\Kuliah\Semester 5\Praktikum Pemrograman Jaringan Komputer\Ngaco\NetworkProgramming-master\MovingObject\bin\Debug\MovingObject.exe
+F:\Kuliah\Semester 5\Praktikum Pemrograman Jaringan Komputer\Ngaco\NetworkProgramming-master\MovingObject\bin\Debug\MovingObject.pdb
+F:\Kuliah\Semester 5\Praktikum Pemrograman Jaringan Komputer\Ngaco\NetworkProgramming-master\MovingObject\obj\Debug\MovingObject.exe
+F:\Kuliah\Semester 5\Praktikum Pemrograman Jaringan Komputer\Ngaco\NetworkProgramming-master\MovingObject\obj\Debug\MovingObject.pdb
+F:\Kuliah\Semester 5\Praktikum Pemrograman Jaringan Komputer\Ngaco\NetworkProgramming-master\MovingObject\obj\Debug\MovingObject.ServerForm.resources
